@@ -3,6 +3,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Irish Grover", system-ui;
     background-image: url("./images/6070.jpg");
@@ -36,9 +40,13 @@ body {
     height: 3rem;
 }
 
-.nav-list a {
+.nav-link {
     text-decoration: none;
     color: black;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
 }
 
 .header-photo {
@@ -185,6 +193,10 @@ body {
     /* width: 25vw;
     height: 25vh;
     overflow: hidden; */
+}
+
+.project:hover {
+    transform: scale(1.1);
 }
 
 .project-img {
