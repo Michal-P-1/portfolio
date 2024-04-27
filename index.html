@@ -9,7 +9,7 @@
             href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="./styles-deployment.css" />
         <script src="./script.js" defer></script>
     </head>
     <body>
@@ -60,81 +60,7 @@
         <main>
             <section id="technologies" class="section">
                 <h1 class="section-title">Technologies</h1>
-                <div class="techologies-grid">
-                    <div class="technology">
-                        <img
-                            class="icon-technology"
-                            src="./images/icons/html-5.png"
-                        />
-                        <span>HTML</span>
-                        <!-- <img class="icon" src="./images/icons/king.png" /> -->
-                    </div>
-                    <div class="technology">
-                        <img
-                            class="icon-technology"
-                            src="./images/icons/css-3.png"
-                        />
-                        <span>CSS</span>
-                        <!-- <img class="icon" src="./images/icons/king.png" /> -->
-                    </div>
-                    <div class="technology">
-                        <img
-                            class="icon-technology"
-                            src="./images/icons/js.png"
-                        />
-                        <span>JavaScript</span>
-                        <!-- <img class="icon" src="./images/icons/king.png" /> -->
-                    </div>
-                    <div class="technology">
-                        <img
-                            class="icon-technology"
-                            src="./images/icons/typescript.png"
-                        />
-                        <span>TypeScript</span>
-                    </div>
-                    <div class="technology">
-                        <img
-                            class="icon-technology"
-                            src="./images/icons/react.png"
-                        />
-                        <span>ReactJS</span>
-                    </div>
-                    <div class="technology">
-                        <img
-                            class="icon-technology"
-                            src="./images/icons/figma.png"
-                        />
-                        <span>Figma</span>
-                    </div>
-                    <div class="technology">
-                        <img
-                            class="icon-technology"
-                            src="./images/icons/php.png"
-                        />
-                        <span>PHP</span>
-                    </div>
-                    <div class="technology">
-                        <img
-                            class="icon-technology"
-                            src="./images/icons/nodejs.png"
-                        />
-                        <span>NodeJS</span>
-                    </div>
-                    <div class="technology">
-                        <img
-                            class="icon-technology"
-                            src="./images/icons/sql.png"
-                        />
-                        <span>SQL</span>
-                    </div>
-                    <div class="technology">
-                        <img
-                            class="icon-technology"
-                            src="./images/icons/mongodb.png"
-                        />
-                        <span>MongoDB</span>
-                    </div>
-                </div>
+                <div class="technologies-grid"></div>
             </section>
             <section id="projects" class="section">
                 <h1 class="section-title">Projects</h1>
@@ -144,7 +70,7 @@
         <footer class="footer">
             Designed by Myky <span class="current-year"></span>
         </footer>
-        <template class="template">
+        <template class="project-template">
             <a data-id class="project">
                 <p class="project-name">Project 1</p>
                 <img
@@ -153,6 +79,12 @@
                 />
                 <p class="project-details">Project description 1</p>
             </a>
+        </template>
+        <template class="technology-template">
+            <div class="technology">
+                <img class="technology-icon" src="./images/icons/html-5.png" />
+                <span class="technology-name">HTML</span>
+            </div>
         </template>
     </body>
 </html>

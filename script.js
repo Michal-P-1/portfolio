@@ -1,32 +1,61 @@
 const projectContainer = document.querySelector(".projects-container");
-const template = document.querySelector(".template");
+const projectTemplate = document.querySelector(".project-template");
+const technologiesContainer = document.querySelector(".technologies-grid");
+const technologyTemplate = document.querySelector(".technology-template");
 
-async function getData() {
+async function getData(
+    jsonFile,
+    renderFunction,
+    template,
+    mainContainer,
+    elContainer,
+    elName,
+    elImg,
+    elDetails
+) {
     // fetch data from the .json file
-    const response = await fetch("projects.json");
-    const projects = await response.json();
+    const response = await fetch(jsonFile);
+    const data = await response.json();
 
-    render(projects);
+    renderFunction(
+        data,
+        template,
+        mainContainer,
+        elContainer,
+        elName,
+        elImg,
+        elDetails
+    );
 }
 
-function render(projects) {
-    projects.forEach((project) => {
+function render(
+    data,
+    template,
+    mainContainer,
+    elContainer,
+    elName,
+    elImg,
+    elDetails
+) {
+    data.forEach((item) => {
         // copy template
         const templateCopy = template.content.cloneNode(true);
-        const projectElement = templateCopy.querySelector(".project");
-        projectElement.dataset.id = project.id;
-        projectElement.href = project.url;
+        const itemElement = templateCopy.querySelector(elContainer);
+        itemElement.dataset.id = item.id;
 
-        const projectName = projectElement.querySelector(".project-name");
-        const projectDetails = projectElement.querySelector(".project-details");
-        const projectImage = projectElement.querySelector(".project-img");
+        const itemName = itemElement.querySelector(elName);
+        const itemImage = itemElement.querySelector(elImg);
 
-        projectName.textContent = project.name;
-        projectDetails.textContent = project.details;
-        projectImage.src = project.img;
+        itemImage.src = item.img;
+        itemName.textContent = item.name;
+
+        if (elDetails) {
+            const itemDetails = itemElement.querySelector(elDetails);
+            itemDetails.textContent = item.details;
+        }
 
         // append data to the project container
-        projectContainer.append(projectElement);
+        mainContainer.append(itemElement);
     });
 }
 
@@ -36,5 +65,27 @@ function setCurrentYear() {
     currentYearElemennt.textContent = new Date().getFullYear();
 }
 
-getData();
+const getProjectsData = getData(
+    "./projects.json",
+    render,
+    projectTemplate,
+    projectContainer,
+    ".project",
+    ".project-name",
+    ".project-img",
+    ".project-details"
+);
+
+const getTechnologiesData = getData(
+    "./technologies.json",
+    render,
+    technologyTemplate,
+    technologiesContainer,
+    ".technology",
+    ".technology-name",
+    ".technology-icon",
+
+    null
+);
+
 setCurrentYear();
