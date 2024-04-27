@@ -5,5 +5,12 @@
         "details": "HTML, CSS, JS(object-oriented)",
         "url": "https://myky123.github.io/maze-game/",
         "img": "./images/icons/projects-icons/maze.png"
+    },
+    {
+        "id": 2,
+        "name": "CSV Visualizer",
+        "details": "ReactJS",
+        "url": "https://visualizer-final.web.app/",
+        "img": "./images/icons/projects-icons/visualizer.png"
     }
 ]
