@@ -10,47 +10,57 @@
         "img": "./images/icons/css-3.png"
     },
     {
-        "id": 3,
+        "id": 4,
+        "name": "Bootstrap",
+        "img": "./images/icons/bootstrap.png"
+    },
+    {
+        "id": 5,
+        "name": "Bootstrap",
+        "img": "./images/icons/sass.png"
+    },
+    {
+        "id": 6,
         "name": "JavaScript",
         "img": "./images/icons/js.png"
     },
     {
-        "id": 4,
+        "id": 7,
         "name": "TypeScript",
         "img": "./images/icons/typescript.png"
     },
     {
-        "id": 5,
+        "id": 8,
         "name": "ReactJS",
         "img": "./images/icons/react.png"
     },
     {
-        "id": 6,
+        "id": 9,
         "name": "Figma",
         "img": "./images/icons/figma.png"
     },
     {
-        "id": 7,
+        "id": 10,
         "name": "PHP",
         "img": "./images/icons/php.png"
     },
     {
-        "id": 8,
+        "id": 11,
         "name": "NodeJS",
         "img": "./images/icons/nodejs.png"
     },
     {
-        "id": 9,
+        "id": 12,
         "name": "SQL",
         "img": "./images/icons/sql.png"
     },
     {
-        "id": 10,
+        "id": 13,
         "name": "MongoDB",
         "img": "./images/icons/mongodb.png"
     },
     {
-        "id": 11,
+        "id": 14,
         "name": "Jest (testing)",
         "img": "./images/icons/jest.png"
     }
