@@ -338,6 +338,7 @@ body {
     -ms-flex-align: center;
     align-items: center;
     padding: 1rem;
+    padding-top: 0;
 }
 
 .modal-content-split {
