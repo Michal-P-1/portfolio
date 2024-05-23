@@ -418,6 +418,7 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    padding: 1rem;
 }
 
 .project-card {
