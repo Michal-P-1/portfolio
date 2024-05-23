@@ -37,10 +37,6 @@ body {
     font-size: clamp(1rem, 0.7273rem + 1.4545vw, 1.25rem);
 }
 
-body.modal-open {
-    overflow: hidden;
-}
-
 /* || HEADER  */
 .fullscreen-header {
     height: 85vh;
@@ -283,6 +279,7 @@ body.modal-open {
     -webkit-box-shadow: 0 0 5px 1px;
     box-shadow: 0 0 5px 1px;
     width: 90%;
+    height: 90vh;
     max-width: 1200px;
     display: none;
     -webkit-box-orient: vertical;
@@ -292,6 +289,7 @@ body.modal-open {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    overflow: auto;
 }
 
 .modal-overlay.active,
@@ -312,7 +310,6 @@ body.modal-open {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 1rem;
 }
 
 .modal-close {
@@ -525,6 +522,7 @@ body.modal-open {
         display: -ms-grid;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        -ms-grid-rows: 6rem 1fr;
         grid-template-rows: 6rem 1fr;
         grid-template-areas:
             "details nav"
