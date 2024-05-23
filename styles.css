@@ -463,6 +463,8 @@ body {
 .project-details {
     padding-top: 1rem;
     text-align: center;
+    height: 4rem;
+    overflow: auto;
     /* max-width: 60%; */
 }
 
