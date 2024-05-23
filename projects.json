@@ -1,16 +1,26 @@
 [
     {
         "id": 1,
-        "name": "Maze game",
-        "details": "HTML, CSS, JS(object-oriented)",
-        "url": "https://myky123.github.io/maze-game/",
-        "img": "./images/icons/projects-icons/maze.png"
+        "name": "Bookstore",
+        "details": "HTML, CSS, Bootstrap, Javascript, Google Books API",
+        "url": "https://myky123.github.io/book_store/",
+        "img": "./images/icons/projects-icons/bookstore.png",
+        "description": "This is a bookstore project. The user can search for books by title, author, or ISBN. The user can also see the details of the book and add it to the cart."
     },
     {
         "id": 2,
+        "name": "Maze game",
+        "details": "HTML, CSS, JS(object-oriented)",
+        "url": "https://myky123.github.io/maze-game/",
+        "img": "./images/icons/projects-icons/maze.png",
+        "description": "This is a simple maze game. The player has to find the way out of the maze. The game has 3 levels of difficulty."
+    },
+    {
+        "id": 3,
         "name": "CSV Visualizer",
         "details": "ReactJS",
         "url": "https://visualizer-final.web.app/",
-        "img": "./images/icons/projects-icons/visualizer.png"
+        "img": "./images/icons/projects-icons/visualizer.png",
+        "description": "This is a CSV visualizer project. The user can upload a CSV file and see the data in a table. The user can also filter the data by column and see the data in a chart."
     }
 ]

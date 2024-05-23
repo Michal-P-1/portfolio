@@ -9,10 +9,27 @@
             href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="styles.css" />
+        <link
+            rel="stylesheet"
+            href="./original-modify-this-code/styles-original.css"
+        />
         <script src="./script.js" defer></script>
     </head>
     <body>
+        <!-- MODAL -->
+        <div class="modal-overlay">
+            <div class="modal-container">
+                <div class="modal-header">
+                    <p class="modal-title">Modal Title</p>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-content">
+                    <div class="modal-project-title">Column 1</div>
+                    <div class="modal-project-details">Column 2</div>
+                </div>
+            </div>
+        </div>
+
         <header class="fullscreen-header">
             <nav class="nav">
                 <ul class="nav-list">
@@ -57,6 +74,7 @@
             </div>
             <div class="header-container right"></div>
         </header>
+
         <main>
             <section id="technologies" class="section">
                 <h1 class="section-title">Technologies</h1>
@@ -67,24 +85,31 @@
                 <div class="projects-container"></div>
             </section>
         </main>
-        <footer class="footer">
-            Designed by Myky <span class="current-year"></span>
-        </footer>
+
         <template class="project-template">
-            <a data-id class="project">
+            <div data-id project-link class="project-card">
                 <p class="project-name">Project 1</p>
                 <img
                     class="project-img"
                     src="./images/FA0ED435-F19A-4C57-A232-E6369777D62E_1_201_a.png"
                 />
-                <p class="project-details">Project description 1</p>
-            </a>
+                <p class="project-details">Project details 1</p>
+                <p class="project-description display-none">
+                    Project description
+                </p>
+            </div>
         </template>
+
         <template class="technology-template">
             <div class="technology">
                 <img class="technology-icon" src="./images/icons/html-5.png" />
                 <span class="technology-name">HTML</span>
             </div>
         </template>
+
+        <footer class="footer">
+            &copy; <span class=".current-year">2024</span> Designed by Myky. All
+            rights reserved.
+        </footer>
     </body>
 </html>
