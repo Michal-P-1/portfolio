@@ -4,6 +4,11 @@
 
 const technologiesContainer = document.querySelector(".technologies-grid");
 const technologyTemplate = document.querySelector(".technology-template");
+const headerEmail = document.querySelector(".header-email");
+
+headerEmail.addEventListener("click", () => {
+    window.location = "mailto:m.podolak14@gmail.com";
+});
 
 // Open modal
 window.addEventListener("click", async (e) => {

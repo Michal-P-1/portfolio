@@ -50,6 +50,10 @@ body {
     flex-direction: column;
 }
 
+.header-email {
+    cursor: pointer;
+}
+
 .nav {
     display: -webkit-box;
     display: -ms-flexbox;
