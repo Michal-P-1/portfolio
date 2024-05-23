@@ -418,7 +418,7 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 1.5rem;
+    padding: 3.5rem 0 1rem 0;
 }
 
 .project-card {
@@ -467,7 +467,7 @@ body {
 .project-details {
     margin-top: 1rem;
     text-align: center;
-    height: 4.5rem;
+    height: 4rem;
     overflow: auto;
     /* max-width: 60%; */
 }
