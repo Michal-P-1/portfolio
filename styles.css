@@ -465,7 +465,7 @@ body {
 }
 
 .project-details {
-    padding-top: 1rem;
+    margin-top: 1rem;
     text-align: center;
     height: 4.5rem;
     overflow: auto;
@@ -505,6 +505,11 @@ body {
     .technology-img {
         width: 50px;
         height: 50px;
+    }
+
+    .project-card {
+        min-width: 350px;
+        padding: 1rem;
     }
 }
 
@@ -656,6 +661,10 @@ body {
     .header-container.right {
         -ms-grid-row: 2;
         -ms-grid-column: 2;
+    }
+
+    .project-details {
+        height: 5rem;
     }
 }
 
