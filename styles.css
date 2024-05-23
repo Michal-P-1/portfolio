@@ -663,6 +663,7 @@ body {
 
 .modal-loader {
     display: none;
+    margin: 0 auto;
     text-align: center;
     height: 50px;
     width: 50px;
