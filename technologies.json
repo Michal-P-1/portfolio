@@ -1,72 +1,72 @@
 [
     {
         "id": 1,
-        "name": "HTML",
+        "title": "HTML",
         "img": "./images/icons/html-5.png"
     },
     {
         "id": 2,
-        "name": "CSS",
+        "title": "CSS",
         "img": "./images/icons/css-3.png"
     },
     {
         "id": 4,
-        "name": "Bootstrap",
+        "title": "Bootstrap",
         "img": "./images/icons/bootstrap.png"
     },
     {
         "id": 5,
-        "name": "Sass",
+        "title": "Sass",
         "img": "./images/icons/sass.png"
     },
     {
         "id": 6,
-        "name": "JavaScript",
+        "title": "JavaScript",
         "img": "./images/icons/js.png"
     },
     {
         "id": 7,
-        "name": "TypeScript",
+        "title": "TypeScript",
         "img": "./images/icons/typescript.png"
     },
     {
         "id": 8,
-        "name": "ReactJS",
+        "title": "ReactJS",
         "img": "./images/icons/react.png"
     },
     {
         "id": 9,
-        "name": "Figma",
+        "title": "Figma",
         "img": "./images/icons/figma.png"
     },
     {
         "id": 10,
-        "name": "PHP",
+        "title": "PHP",
         "img": "./images/icons/php.png"
     },
     {
         "id": 11,
-        "name": "NodeJS",
+        "title": "NodeJS",
         "img": "./images/icons/nodejs.png"
     },
     {
         "id": 12,
-        "name": "SQL",
+        "title": "SQL",
         "img": "./images/icons/sql.png"
     },
     {
         "id": 13,
-        "name": "MongoDB",
+        "title": "MongoDB",
         "img": "./images/icons/mongodb.png"
     },
     {
         "id": 14,
-        "name": "Jest (testing)",
+        "title": "Jest (testing)",
         "img": "./images/icons/jest.png"
     },
     {
         "id": 15,
-        "name": "Git",
+        "title": "Git",
         "img": "./images/icons/git.png"
     }
 ]

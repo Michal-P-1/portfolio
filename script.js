@@ -1,30 +1,59 @@
 // TODO
-// 1. Create modals with the projects description and visit website option
-// 2. On click on the website, open the project in a new tab
+// 3. Add a 404 page
+// 4. Try and catch for fetch
 
-const projectContainer = document.querySelector(".projects-container");
-const projectTemplate = document.querySelector(".project-template");
 const technologiesContainer = document.querySelector(".technologies-grid");
 const technologyTemplate = document.querySelector(".technology-template");
 
 // Open modal
-window.addEventListener("click", (e) => {
+window.addEventListener("click", async (e) => {
     const projectCard = e.target.closest(".project-card");
 
     if (projectCard) {
         const modalOverlay = document.querySelector(".modal-overlay");
         const modalContainer = document.querySelector(".modal-container");
+
         modalOverlay.classList.add("active");
         modalContainer.classList.add("active");
 
-        const modalProjectDetails = projectCard.querySelector(
-            ".modal-project-details"
-        );
-        const modalProjectName = projectCard.querySelector(
+        const modalProjectTitle = document.querySelector(
             ".modal-project-title"
         );
+        const modalProjectDescription = document.querySelector(
+            ".modal-project-description"
+        );
+        const modalProjectImage = document.querySelector(".modal-project-img");
+        const modalProjectLink = document.querySelector(".modal-project-link");
+        const modalLoader = document.querySelector(".modal-loader");
 
-        // modalProjectDetails.textContent = projectCard.dataset.details;
+        modalProjectTitle.textContent = "";
+        modalProjectDescription.textContent = "";
+        modalProjectImage.src = "";
+        modalProjectLink.textContent = "";
+        // Show loader
+        modalLoader.classList.add("show");
+
+        // Fetch data
+        const projectTarget = await getProjectDetails(projectCard.dataset.id);
+
+        if (!projectTarget) {
+            modalProjectTitle.textContent = "Project not found";
+            modalProjectDescription.textContent =
+                "The project you are looking for is not available at the moment. Please try again later.";
+            modalProjectLink.textContent = "Back to Home";
+            modalProjectLink.href = "/";
+        } else {
+            modalProjectImage.src = projectTarget.img;
+            // Img loaded - remove loader
+            modalLoader.classList.remove("show");
+
+            modalProjectTitle.textContent = projectTarget.title;
+            modalProjectDescription.textContent = projectTarget.description;
+            modalProjectLink.textContent = "Visit Project";
+            modalProjectLink.href = projectTarget.url;
+        }
+
+        // modalProjectDetails.textContent = card.dataset.cardDetails;
     }
 });
 
@@ -41,90 +70,56 @@ window.addEventListener("click", (e) => {
     }
 });
 
-async function getData(
-    jsonFile,
-    renderFunction,
-    template,
-    mainContainer,
-    elContainer,
-    elName,
-    elImg,
-    elDetails
-) {
+async function getProjectDetails(targetId) {
+    const data = await getData("./projects.json");
+    const targetData = data.find((item) => item.id === Number(targetId));
+    return targetData;
+}
+
+// setCurrentYear();
+
+async function getData(jsonFile) {
     // fetch data from the .json file
-    const response = await fetch(jsonFile);
-    const data = await response.json();
+    try {
+        const response = await fetch(jsonFile);
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error("Error fetching data", error);
+    }
 
-    renderFunction(
-        data,
-        template,
-        mainContainer,
-        elContainer,
-        elName,
-        elImg,
-        elDetails
-    );
+    return data;
 }
 
-function render(
-    data,
-    template,
-    mainContainer,
-    elContainer,
-    elName,
-    elImg,
-    elDetails
-) {
-    data.forEach((item) => {
-        // copy template
-        const templateCopy = template.content.cloneNode(true);
-        const itemElement = templateCopy.querySelector(elContainer);
-        itemElement.dataset.id = item.id;
-        itemElement.dataset.link = item.url;
-        itemElement.href = item.url;
+async function render(typePlural, type) {
+    const data = await getData(`./${typePlural}.json`);
+    const template = document.querySelector(`.${type}-template`);
+    const container =
+        document.querySelector(`.${typePlural}-container`) ||
+        document.querySelector(`.${typePlural}-grid`);
 
-        const itemName = itemElement.querySelector(elName);
-        const itemImage = itemElement.querySelector(elImg);
+    if (!data) {
+        console.error("Error fetching data");
+    } else {
+        data.forEach((item) => {
+            const templateCopy = template.content.cloneNode(true);
+            const card = templateCopy.querySelector(`.${type}-card`);
+            card.dataset.id = item.id;
+            const cardTitle = card.querySelector(`.${type}-title`);
+            const cardImage = card.querySelector(`.${type}-img`);
+            const cardDetails = card.querySelector(`.${type}-details`);
 
-        itemImage.src = item.img;
-        itemName.textContent = item.name;
+            cardImage.src = item.img;
+            cardTitle.textContent = item.title;
+            if (type === "project") {
+                cardDetails.textContent = item.details;
+            }
 
-        if (elDetails) {
-            const itemDetails = itemElement.querySelector(elDetails);
-            itemDetails.textContent = item.details;
-        }
-
-        // append data to the project container
-        mainContainer.append(itemElement);
-    });
+            // append data to the project container
+            container.append(card);
+        });
+    }
 }
 
-function setCurrentYear() {
-    const currentYearElemennt = document.querySelector(".current-year");
-
-    // currentYearElemennt.textContent = new Date().getFullYear();
-}
-
-const getProjectsData = getData(
-    "./projects.json",
-    render,
-    projectTemplate,
-    projectContainer,
-    ".project-card",
-    ".project-name",
-    ".project-img",
-    ".project-details"
-);
-
-const getTechnologiesData = getData(
-    "./technologies.json",
-    render,
-    technologyTemplate,
-    technologiesContainer,
-    ".technology",
-    ".technology-name",
-    ".technology-icon",
-    null
-);
-
-setCurrentYear();
+const getAndRenderProjects = render("projects", "project");
+const getAndRenderTechnologies = render("technologies", "technology");
