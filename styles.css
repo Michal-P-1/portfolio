@@ -453,6 +453,10 @@ body {
     transform: scale(1.1);
 }
 
+.project-title {
+    padding-bottom: 0.5rem;
+}
+
 .project-img {
     min-height: 75px;
     min-width: 75px;
