@@ -31,7 +31,7 @@ html {
 
 body {
     font-family: var(--font-family-decorative);
-    background-image: url("./images/6070.jpg");
+    background-image: url("../images/6070.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     font-size: clamp(1rem, 0.7273rem + 1.4545vw, 1.25rem);
@@ -364,7 +364,6 @@ body {
     align-items: center;
     padding: 1.5rem 0;
     border-top: 0.5px solid gray;
-    border-bottom: 0.5px solid gray;
 }
 
 .modal-project-title {
@@ -386,10 +385,23 @@ body {
     font-size: clamp(0.875rem, 0.75rem + 0.6667vw, 1.25rem);
 }
 
+.modal-project-technologies {
+    font-family: var(--font-family-text);
+    font-weight: 800;
+    padding-bottom: 2rem;
+    text-align: center;
+    width: 100%;
+    border-bottom: 0.5px solid gray;
+}
+
+.modal-project-technologies-list {
+    font-weight: 600;
+}
+
 .modal-project-link {
     text-decoration: none;
     padding-top: 1.5rem;
-    color: rgb(16, 16, 84);
+    color: rgb(37, 10, 105);
     font-size: clamp(1rem, 0.8333rem + 0.8889vw, 1.5rem);
 }
 
@@ -418,7 +430,7 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 3.5rem 0 1rem 0;
+    padding: 2.5rem 0 1rem 0;
 }
 
 .project-card {
@@ -440,7 +452,7 @@ body {
     justify-content: center;
     width: 35%;
     min-width: 250px;
-    min-height: 250px;
+    min-height: 200px;
     border-radius: 5px;
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
@@ -454,7 +466,7 @@ body {
 }
 
 .project-title {
-    padding-bottom: 0.5rem;
+    margin: 1rem;
 }
 
 .project-img {
@@ -465,10 +477,10 @@ body {
 }
 
 .project-details {
-    margin-top: 1rem;
+    /* padding-top: 1rem;
     text-align: center;
     height: 4rem;
-    overflow: auto;
+    overflow: auto; */
     /* max-width: 60%; */
 }
 
@@ -567,7 +579,7 @@ body {
     .header-container.right {
         opacity: 1;
         grid-area: photo;
-        background-image: url("./images/crack.png");
+        background-image: url("../images/crack.png");
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -661,10 +673,6 @@ body {
     .header-container.right {
         -ms-grid-row: 2;
         -ms-grid-column: 2;
-    }
-
-    .project-details {
-        height: 5rem;
     }
 }
 
