@@ -9,7 +9,10 @@
             href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="./styles.css" />
+        <link
+            rel="stylesheet"
+            href="./original-modify-this-code/styles-original.css"
+        />
         <script src="./script.js" defer></script>
     </head>
     <body>
@@ -32,7 +35,13 @@
                             Project Description
                         </div>
                     </div>
-                    <a class="modal-project-link" href="#">Visit Project</a>
+                    <p class="modal-project-technologies">
+                        Used technologies:
+                        <span class="modal-project-technologies-list"></span>
+                    </p>
+                    <a class="modal-project-link" href="#" target="_blank"
+                        >Visit Project</a
+                    >
                 </div>
             </div>
         </div>
@@ -95,18 +104,19 @@
 
         <template class="project-template">
             <div data-id data-project-link class="project-card">
-                <p class="project-title">Project 1</p>
                 <img
                     class="project-img"
                     src="./images/FA0ED435-F19A-4C57-A232-E6369777D62E_1_201_a.png"
                 />
-                <p class="project-details">Project details 1</p>
-                <p
+                <p class="project-title">Project 1</p>
+
+                <!-- <p class="project-details">Project details 1</p> -->
+                <!-- <p
                     data-project-description
                     class="project-description display-none"
                 >
                     Project description
-                </p>
+                </p> -->
             </div>
         </template>
 

@@ -28,6 +28,9 @@ window.addEventListener("click", async (e) => {
             ".modal-project-description"
         );
         const modalProjectImage = document.querySelector(".modal-project-img");
+        const modalProjectTechnologies = document.querySelector(
+            ".modal-project-technologies-list"
+        );
         const modalProjectLink = document.querySelector(".modal-project-link");
         const modalLoader = document.querySelector(".modal-loader");
 
@@ -35,6 +38,7 @@ window.addEventListener("click", async (e) => {
         modalProjectDescription.textContent = "";
         modalProjectImage.src = "";
         modalProjectLink.textContent = "";
+        modalProjectTechnologies.href = "";
         // Show loader
         modalLoader.classList.add("show");
 
@@ -54,6 +58,7 @@ window.addEventListener("click", async (e) => {
 
             modalProjectTitle.textContent = projectTarget.title;
             modalProjectDescription.textContent = projectTarget.description;
+            modalProjectTechnologies.textContent = projectTarget.details;
             modalProjectLink.textContent = "Visit Project";
             modalProjectLink.href = projectTarget.url;
         }
@@ -112,13 +117,13 @@ async function render(typePlural, type) {
             card.dataset.id = item.id;
             const cardTitle = card.querySelector(`.${type}-title`);
             const cardImage = card.querySelector(`.${type}-img`);
-            const cardDetails = card.querySelector(`.${type}-details`);
+            // const cardDetails = card.querySelector(`.${type}-details`);
 
             cardImage.src = item.img;
             cardTitle.textContent = item.title;
-            if (type === "project") {
-                cardDetails.textContent = item.details;
-            }
+            // if (type === "project") {
+            //     cardDetails.textContent = item.details;
+            // }
 
             // append data to the project container
             container.append(card);

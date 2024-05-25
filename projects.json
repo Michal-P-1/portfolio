@@ -18,7 +18,7 @@
     {
         "id": 3,
         "title": "CSV Visualizer Project",
-        "details": "ReactJS",
+        "details": "ReactJS, MongoDB, Express, NodeJS",
         "url": "https://visualizer-final.web.app/",
         "img": "./images/icons/projects-icons/visualizer.png",
         "description": "This project lets users upload a CSV file to visualize data in different charts. Users can switch between chart types, download the charts, and filter data values. Built with the MERN stack (MongoDB, Express, ReactJS, NodeJS), the backend is not currently online, but the frontend is fully functional."
