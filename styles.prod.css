@@ -450,7 +450,7 @@ body {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    width: 35%;
+    width: 25%;
     min-width: 250px;
     min-height: 200px;
     border-radius: 5px;
