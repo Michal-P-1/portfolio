@@ -283,7 +283,7 @@ body {
     -webkit-box-shadow: 0 0 5px 1px;
     box-shadow: 0 0 5px 1px;
     width: 90%;
-    height: 90vh;
+    height: 80vh;
     max-width: 1200px;
     display: none;
     -webkit-box-orient: vertical;
@@ -522,6 +522,10 @@ body {
     .project-card {
         min-width: 350px;
         padding: 1rem;
+    }
+
+    .modal-container {
+        height: 90vh;
     }
 }
 
