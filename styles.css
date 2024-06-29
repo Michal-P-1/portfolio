@@ -21,10 +21,14 @@ html {
 
 body {
     font-family: var(--font-family-decorative);
-    background-image: url("./images/6070.jpg");
+    background-color: white;
+    font-size: clamp(1rem, 0.7273rem + 1.4545vw, 1.25rem);
+}
+
+.image-loaded {
+    /* background-image: url("./images/6070_1920.webp"); */
     background-size: cover;
     background-repeat: no-repeat;
-    font-size: clamp(1rem, 0.7273rem + 1.4545vw, 1.25rem);
 }
 
 /* || HEADER  */
@@ -438,9 +442,9 @@ body {
     .header-container.right {
         opacity: 1;
         grid-area: photo;
-        background-image: url("./images/crack.png");
-        background-repeat: no-repeat;
-        background-size: cover;
+        /* background-image: url("./images/crack.webp"); */
+        /* background-repeat: no-repeat;
+        background-size: cover; */
     }
 
     .header-logo {

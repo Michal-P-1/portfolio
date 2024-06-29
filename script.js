@@ -1,10 +1,33 @@
-// TODO
-// 3. Add a 404 page
-// 4. Try and catch for fetch
-
 const technologiesContainer = document.querySelector(".technologies-grid");
 const technologyTemplate = document.querySelector(".technology-template");
 const headerEmail = document.querySelector(".header-email");
+
+// Display background image after it's loaded
+document.addEventListener("DOMContentLoaded", () => {
+    const body = document.body;
+    const headerContainerRight = document.querySelector(
+        ".header-container.right"
+    );
+    const backgrounImg1 = new Image();
+    const backgrounImg2 = new Image();
+
+    // img1Src = "";
+
+    // if (window.innerWidth < 768) {
+    //     img1Src = "./images/6070_1920.webp";
+    // } else {
+    //     img1Src = "./images/6070_3000.webp";
+    // }
+
+    backgrounImg1.src = "./images/6070_3000.webp";
+    backgrounImg2.src = "./images/crack.webp";
+    backgrounImg1.onload = () => {
+        headerContainerRight.style.backgroundImage = `url(${backgrounImg2.src})`;
+        headerContainerRight.classList.add("image-loaded");
+        body.style.backgroundImage = `url(${backgrounImg1.src})`;
+        body.classList.add("image-loaded");
+    };
+});
 
 headerEmail.addEventListener("click", () => {
     window.location = "mailto:m.podolak14@gmail.com";
@@ -85,8 +108,6 @@ async function getProjectDetails(targetId) {
     const targetData = data.find((item) => item.id === Number(targetId));
     return targetData;
 }
-
-// setCurrentYear();
 
 async function getData(jsonFile) {
     // fetch data from the .json file
