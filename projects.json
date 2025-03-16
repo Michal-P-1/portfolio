@@ -3,20 +3,12 @@
         "id": 1,
         "title": "Bookstore",
         "details": "HTML, CSS, Bootstrap, Javascript, Google Books API",
-        "url": "https://michal-p-1.github.io/book_store/",
+        "url": "https://michal-p-1.github.io/bookstore/",
         "img": "./images/icons/projects-icons/bookstore.png",
         "description": "This bookstore project lets users search for books, view details, add books to their cart, and see the total price. The cart is saved in session storage, so it remains accessible across pages. Users can also choose from three color themes to customize the site's appearance. The project was created using the Google Books API, JavaScript, HTML, CSS, and Bootstrap. The website is fully responsive and contact form is functional."
     },
     {
         "id": 2,
-        "title": "Blog project",
-        "details": "ReactJS, CSS modules, Typescript, ReactRouter, Firebase database",
-        "url": "https://blog-react-ad95c.web.app",
-        "img": "./images/icons/projects-icons/blog.png",
-        "description": "This is a React-based blog platform designed to provide users with a seamless blogging experience. The application allows users to create profiles, post content and adding comments."
-    },
-    {
-        "id": 3,
         "title": "Clear View Project",
         "details": "HTML, CSS, Javascript",
         "url": "https://michal-p-1.github.io/clearView/index.html",
@@ -24,7 +16,7 @@
         "description": "Website for a drone window cleaning service. It features a landing page, services page and about page. The website is fully responsive and built with HTML, CSS, and JavaScript. The contact form is fully functional."
     },
     {
-        "id": 4,
+        "id": 3,
         "title": "Classic Maze Game",
         "details": "HTML, CSS, JS(object-oriented)",
         "url": "https://michal-p-1.github.io/maze-game/",
@@ -32,7 +24,7 @@
         "description": "This is a simple old-school maze game where the player must find their way in the maze to reach the trophy. It has three levels of difficulty and supports two players playing at the same time. The game is built using object-oriented JavaScript."
     },
     {
-        "id": 5,
+        "id": 4,
         "title": "CSV Visualizer Project",
         "details": "ReactJS, MongoDB, Express, NodeJS",
         "url": "https://visualizer-final.web.app/",
